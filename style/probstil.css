@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    color: #ffffff;
+    color: #430d4b;
     font-family: 'Magnolia Script', cursive;
     font-size: clamp(24px, 4vw, 34px);
    
@@ -144,7 +144,7 @@ body{
 
 h2{
     font-size: 2vw;
-    color: #ffffff;
+    color: #430d4b;
 }
 
 .cards{
@@ -160,7 +160,7 @@ h2{
   
 }
 p{  font-size: 3vw;
-    color:#e1e1e1 ;
+    color:#430d4b;
 }
 .card{
     width: 100%;
