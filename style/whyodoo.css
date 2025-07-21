@@ -1,0 +1,107 @@
+
+html {
+    height: 100%;
+    background-image: url("https://img.lovepik.com/background/20211021/large/lovepik-line-background-of-science-and-technology-map-image_500469026.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.788);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.mainpart {
+    width: 100%;
+   height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.texts{
+ 
+    height: 100%;
+}
+.text>h3{
+    font-size: 20px;
+    margin: 0;
+
+}
+.text>h4{
+    font-size: 16px;
+}
+.text {
+    width: 100%;
+    height: 10%;
+    color: #430d4b;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    font-size: 24px;
+    margin:10px 0;
+}
+
+.text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 4px solid #430d4b;
+    width: 100%;
+    padding: 10px 0;
+    gap: 5px;
+}
+
+.pagination a {
+    background-color: #430d4b;
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+    color: #000;
+    border: 2px solid #430d4b;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: #000;
+    border: 1px solid #4CAF50;
+}
+
+@media (max-width: 768px) {
+    .kshrlogo {
+        width: 80%;
+    }
+
+    .erptext h1 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        gap: 3px;
+    }
+
+    .pagination a {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+}

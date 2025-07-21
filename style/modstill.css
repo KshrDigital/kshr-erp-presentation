@@ -1,0 +1,487 @@
+html {
+    height: 100%;
+    background-image: url("https://img.lovepik.com/background/20211021/large/lovepik-simple-technology-background-image_401691343.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.432);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.mainpart {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container {
+    width: 70%;
+    height: 60%;
+    margin: 0px auto;
+ 
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+   
+    user-select: none;
+}
+.mainpart {
+  position: relative;
+  background: #eeeeee00;
+  font-family: "Tahoma";
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 4px solid #430d4b;
+    width: 100%;
+    padding: 10px 0;
+    gap: 100px;
+}
+
+.pagination a {
+    background-color: #430d4be8;
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    width: 1%;
+    border-radius: 10px;
+}
+
+
+.pagination a:hover {
+    background-color: #ddd;
+    color: #000;
+    border: 2px solid #430d4b;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: #000;
+    border: 1px solid #4CAF50;
+}
+
+/* Animatsiya */
+.animate-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.7s ease-out;
+}
+
+.animate-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsiv tweaks */
+@media (max-width: 768px) {
+    .kshrlogo {
+        width: 80%;
+    }
+
+    .erptext h1 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        gap: 3px;
+    }
+
+    .pagination a {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+}
+@-webkit-keyframes slidein {
+  0% {
+    top: -400px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+@keyframes slidein {
+  0% {
+    top: -400px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+@-webkit-keyframes slideout {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: -400px;
+    opacity: 0;
+  }
+}
+@keyframes slideout {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: -400px;
+    opacity: 0;
+  }
+}
+
+.mainpart #scene {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 1000px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+}
+.mainpart #scene #left-zone {
+  background: #fff;
+  height: 75%;
+  flex-grow: 0;
+  display: flex;
+  width: 350px;
+  align-items: center;
+  justify-content: left;
+}
+.mainpart #scene #left-zone .list {
+  display: flex;
+  list-style: none;
+  align-content: stretch;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] {
+  display: none;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ label {
+  display: block;
+  opacity: 0.5;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ label:first-letter {
+  text-transform: uppercase;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ label:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ label.label_account:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("../img/accounting.png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ label.label_sale:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("../img/acquisition.png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ label.label_hr:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("../img/human-resources.png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ label.label_market:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("../img/social-media-marketing.png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ label.label_web:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("../img/world-wide-web.png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ label.label_service:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("../img/provider.png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ label.label_supply:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("../img/supply-chain-management\ \(2\).png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}.mainpart #scene #left-zone .list li.item input[type=radio] ~ label.label_product:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("../img/increase.png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content {
+  position: absolute;
+  left: 350px;
+  top: -400px;
+  width: 650px;
+  height: 400px;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-name: slideout;
+          animation-name: slideout;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_account .picto {
+  height: 100px;
+  width: 100px;
+  background-image: url("../img/accounting.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_account h1 {
+  color: #D64541;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_sale .picto {
+  height: 100px;
+  width: 100px;
+  background-image: url("../img/acquisition.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_sale h1 {
+  color: #F5D76E;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_hr .picto {
+  height: 100px;
+  width: 100px;
+  background-image: url("../img/human-resources.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_hr h1 {
+  color: #00B16A;
+}
+
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_market .picto {
+  height: 100px;
+  width: 100px;
+  background-image: url("../img/social-media-marketing.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_market h1 {
+  color: #F27935;
+}
+
+
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_web .picto {
+  height: 100px;
+  width: 100px;
+  background-image: url("../img/world-wide-web.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_web h1 {
+  color: #bc0909;
+}
+
+
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_service .picto {
+  height: 100px;
+  width: 100px;
+  background-image: url("../img/provider.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_service h1 {
+  color: #1ebce8;
+}
+
+
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_supply .picto {
+  height: 100px;
+  width: 100px;
+  background-image: url("../img/supply-chain-management\ \(2\).png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_supply h1 {
+  color: #1da916;
+}
+
+
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_product .picto {
+  height: 100px;
+  width: 100px;
+  background-image: url("../img/increase.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content.content_product h1 {
+  color: #a01294;
+}
+
+
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content h1:first-letter {
+  text-transform: uppercase;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio] ~ .content p {
+  max-width: 50%;
+  text-align: center;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio]:checked ~ label {
+  opacity: 1;
+  -webkit-animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.mainpart #scene #left-zone .list li.item input[type=radio]:checked ~ label.label_accuont {
+  color: #D64541;
+  border-right: solid 4px #D64541;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio]:checked ~ label.label_sale {
+  color: #F5D76E;
+  border-right: solid 4px #F5D76E;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio]:checked ~ label.label_hr {
+  color: #00B16A;
+  border-right: solid 4px #00B16A;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio]:checked ~ label.label_market {
+  color: #F27935;
+  border-right: solid 4px #F27935;
+}
+
+.mainpart #scene #left-zone .list li.item input[type=radio]:checked ~ label.label_web {
+  color: #bc0909;
+  border-right: solid 4px #bc0909;
+}
+
+.mainpart #scene #left-zone .list li.item input[type=radio]:checked ~ label.label_service {
+  color: #1ebce8;
+  border-right: solid 4px #1ebce8;
+}
+
+.mainpart #scene #left-zone .list li.item input[type=radio]:checked ~ label.label_supply {
+  color: #1da916;
+  border-right: solid 4px #1da916;
+}
+.mainpart #scene #left-zone .list li.item input[type=radio]:checked ~ label.label_product {
+  color: #a01294;
+  border-right: solid 4px #a01294;
+}
+
+.mainpart #scene #left-zone .list li.item input[type=radio]:checked ~ .content {
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.mainpart #scene #middle-border {
+  background-color: #eee;
+  height: 75%;
+  flex-grow: 1;
+  max-width: 2px;
+  z-index: 0;
+}
+.mainpart #scene #right-zone {
+  background: #fff;
+  height: 100%;
+  flex-grow: 3;
+}

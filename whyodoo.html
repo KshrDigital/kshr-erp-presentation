@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/whyodoo.css">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <div class="mainpart"> 
+        <div>
+            <h1>Nega ERP biznes uchun qulay?</h1>
+        </div> 
+        
+        <div class="texts">
+            <div class="text">
+                <h3>1️⃣ Markazlashgan boshqaruv</h2>
+                <h4>🎯 Barcha jarayonlarni bitta platforma orqali boshqarasiz</h4>
+                
+            </div>
+            <div class="text">
+                <h3>2️⃣ Rejalashtirish va tahlilni yaxshilash</h2>
+                <h4>🎯 Ishlab chiqarish samaradorligi avtomatik hisoblanadi va tahlil qilinadi.:</h4>
+                     
+            </div>
+             <div class="text">
+                <h3>3️⃣ Xarajatlarni kamaytirish</h2>
+                <h4>🎯 Resurslarni samarali taqsimlash</h4>
+                     
+            </div>
+             <div class="text">
+                <h3>4️⃣ Mijozlarga xizmatni yaxshilash</h2>
+                <h4>🎯 ERP yordamida mijozlarga oid barcha ma’lumot qo‘lingizda</h4>
+                     
+            </div>
+             <div class="text">
+                <h3>5️⃣ Moslashuvchanlik va kengaytirish imkoniyati</h2>
+                <h4>🎯 ERP tizimlari odatda modulli bo‘ladi: <br> Boshlanishida faqat kerakli modullar bilan boshlaysiz <br> Keyin ehtiyoj oshgani sayin boshqa modullarni qo‘shasiz</h4>
+                     
+            </div>
+            
+
+ 
+        
+    </div>     
+    <div class="pagination">
+            <a href="#" style="margin-right: 30px;">&laquo;</a>
+            <a href="./home.html">1</a>
+            <a href="./differ.html">2</a>
+            <a href="./problems.html">3</a>
+            <a href="./solution.html">4</a>
+            <a href="./moduls.html">5</a>
+            <a href="./price.html">6</a>
+            <a href="./whyodoo.html">7</a>
+            <a href="./thanks.html">8</a>
+        <a href="#" style="margin-left: 30px;">&raquo;</a>
+        
+    </div>
+  
+    
+    <script>
+
+const container = document.querySelector('.mainpart');
+const texts = document.querySelectorAll('.text');
+let index = -1;
+
+container.addEventListener('mousedown', (e) => {
+    e.preventDefault(); // bu ham yetarli bo‘ladi ko‘pincha
+
+    if (e.button === 0) {
+        // Chap tugma
+        if (index < texts.length - 1) {
+            index++;
+            texts[index].classList.add('show');
+        }
+    } else if (e.button === 2) {
+        // O‘ng tugma
+        if (index >= 0) {
+            texts[index].classList.remove('show');
+            index--;
+        }
+    }
+});
+
+// O‘ng menyuni butun sahifada bloklash
+window.addEventListener('contextmenu', e => e.preventDefault());
+
+
+</script>
+
+
+
+
+</body>
+</html>
