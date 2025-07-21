@@ -105,17 +105,7 @@ tr:hover {
     border: 1px solid #4CAF50;
 }
 
-/* Animatsiya */
-.animate-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 0.7s ease-out;
-}
 
-.animate-left.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
 
 /* Responsiv tweaks */
 @media (max-width: 768px) {
