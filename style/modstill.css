@@ -485,3 +485,78 @@ body {
   height: 100%;
   flex-grow: 3;
 }
+
+@media (max-width: 992px) {
+  .mainpart #scene {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    padding: 20px 10px;
+    position: relative;
+  }
+
+  .mainpart #scene #left-zone {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+
+  .mainpart #scene #left-zone .list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .mainpart #scene #left-zone .list li.item input[type=radio] ~ label {
+    position: relative;
+    margin: 0 5px;
+    font-size: 14px;
+    line-height: 40px;
+    padding-left: 60px;
+    height: 40px;
+  }
+
+  .mainpart #scene #left-zone .list li.item input[type=radio] ~ label::before {
+    width: 40px;
+    height: 40px;
+    margin-left: 0;
+    left: 10px;
+  }
+
+  .mainpart #scene #middle-border {
+    display: none;
+  }
+
+  .mainpart #scene #left-zone .list li.item input[type=radio] ~ .content {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+    background-color: #f9f9f9;
+    box-shadow: none;
+  }
+
+  .mainpart #scene #left-zone .list li.item input[type=radio]:checked ~ label {
+    border-right: none;
+    border-bottom: 2px solid currentColor;
+  }
+
+  .mainpart #scene #left-zone .list li.item input[type=radio] ~ .content p {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .mainpart #scene #left-zone .list li.item input[type=radio] ~ .content h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .mainpart #scene #left-zone .list li.item input[type=radio] ~ .content .picto {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+}

@@ -5,15 +5,15 @@ html {
     background-position: center;
     background-repeat: no-repeat;
 }
-
 body {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.503);
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
-
-
 
 .mainpart {
     width: 100%;
@@ -23,6 +23,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    padding: 20px;
 }
 
 .logos {
@@ -39,6 +40,7 @@ body {
     text-align: center;
     width: 40%;
     max-width: 300px;
+    flex: 1 1 200px;
 }
 
 .kshrlogo img {
@@ -48,26 +50,25 @@ body {
 
 .erptext {
     width: 60%;
-    height: 50%;
     text-align: center;
     padding: 20px;
-    
+    flex: 1 1 300px;
 }
 
 .erptext h1 {
     color: #430d4b;
     font-family: 'Magnolia Script', cursive;
     font-size: clamp(24px, 4vw, 34px);
-   
 }
 
 @font-face {
-  font-family: 'Magnolia Script';
-  src: url('fonts/MagnoliaScript.woff2') format('woff2'),
-       url('fonts/MagnoliaScript.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Magnolia Script';
+    src: url('fonts/MagnoliaScript.woff2') format('woff2'),
+         url('fonts/MagnoliaScript.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -75,7 +76,7 @@ body {
     border-top: 4px solid #430d4b;
     width: 100%;
     padding: 10px 0;
-    gap: 100px;
+    gap: 30px;
 }
 
 .pagination a {
@@ -85,15 +86,16 @@ body {
     text-decoration: none;
     border: 2px solid #ddd;
     transition: all 0.3s ease;
-    width: 1%;
     border-radius: 10px;
+    font-size: 16px;
+    min-width: 35px;
+    text-align: center;
 }
 
 .pagination a:hover {
     background-color: #ddd;
     color: #000;
     border: 2px solid #430d4b;
-    
 }
 
 .pagination a.active {
@@ -102,32 +104,66 @@ body {
     border: 1px solid #4CAF50;
 }
 
+.btnleft, .btnright {
+    background-color: #430d4be8;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnleft:hover, .btnright:hover {
+    background-color: #333;
+}
+
+@media (max-width: 992px) {
+    .kshrlogo {
+        width: 60%;
+    }
+
+    .erptext {
+        width: 80%;
+    }
+}
 
 @media (max-width: 768px) {
     .kshrlogo {
         width: 80%;
     }
 
+    .erptext {
+        width: 90%;
+    }
+
     .erptext h1 {
-        font-size: 16px;
+        font-size: 20px;
+    }
+
+    .pagination {
+        gap: 10px;
     }
 }
 
 @media (max-width: 480px) {
+    .mainpart {
+        gap: 30px;
+    }
+
     .pagination {
-        gap: 3px;
+        gap: 6px;
+        flex-wrap: wrap;
     }
 
     .pagination a {
         padding: 6px 8px;
         font-size: 12px;
+        min-width: 25px;
     }
-}
 
-.btnleft{
-   
-
-}
-.btnright{
-    
+    .btnleft, .btnright {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
 }

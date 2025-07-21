@@ -76,3 +76,110 @@ body {
         font-size: 12px;
     }
 }
+
+html {
+    height: 100%;
+    background-image: url("https://img.lovepik.com/background/20211022/large/lovepik-premium-blue-technology-background-image_401959707.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.788);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.mainpart {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 4px solid #430d4b;
+    width: 100%;
+    padding: 10px 0;
+    gap: 100px;
+}
+
+.pagination a {
+    background-color: #430d4be8;
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    min-width: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+    color: #000;
+    border: 2px solid #430d4b;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: #000;
+    border: 1px solid #4CAF50;
+}
+
+/* ✅ Responsivlik qo‘shimchalari */
+
+@media (max-width: 992px) {
+    .pagination {
+        gap: 40px;
+        padding: 10px 10px;
+    }
+
+    .pagination a {
+        font-size: 14px;
+        padding: 6px 10px;
+        min-width: 32px;
+    }
+
+    .mainpart {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pagination {
+        gap: 20px;
+    }
+
+    .pagination a {
+        font-size: 12px;
+        padding: 6px 8px;
+        min-width: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        gap: 8px;
+    }
+
+    .pagination a {
+        font-size: 11px;
+        padding: 5px 6px;
+        min-width: 24px;
+    }
+
+    .mainpart {
+        padding: 5px;
+    }
+}

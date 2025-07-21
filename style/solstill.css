@@ -125,3 +125,65 @@ body {
         font-size: 12px;
     }
 }
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .texts {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .text>h3 {
+        font-size: 18px;
+    }
+
+    .text>h4 {
+        font-size: 14px;
+    }
+
+    .text {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .pagination {
+        gap: 40px;
+    }
+
+    .pagination a {
+        padding: 6px 10px;
+        font-size: 14px;
+        min-width: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .texts {
+        grid-template-columns: 1fr;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .text>h3 {
+        font-size: 16px;
+    }
+
+    .text>h4 {
+        font-size: 13px;
+    }
+
+    .pagination {
+        gap: 12px;
+    }
+
+    .pagination a {
+        padding: 5px 8px;
+        font-size: 12px;
+        min-width: 28px;
+    }
+}
